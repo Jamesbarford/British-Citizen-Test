@@ -1,0 +1,260 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul, li {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+/* my styles */
+
+/*keyframe animations*/
+
+@-webkit-keyframes fade-in  {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-moz-keyframes fade-in {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-o-keyframes fade-in  {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes fade-in  {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/*Global*/
+body {
+  font-family: sans-serif;
+}
+
+html {
+	-webkit-font-smoothing:  antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+	font-size: 40px;
+	font-weight: bold;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+h2 {
+	font-size: 30px;
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+
+h3 {
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 1.20;
+	opacity: 1.00;
+	margin-bottom: 5px;
+	letter-spacing: -0.72px;
+	word-spacing: 0.00px;
+	text-transform: none;
+}
+
+p {
+	line-height: 1.60;
+	font-size: 18px;
+	opacity: .7;
+	padding-bottom: 25px;
+	letter-spacing: -0.30px;
+	word-spacing: -0.10px;
+	text-transform: none;
+}
+
+/* question wrap */
+
+.question-wrap {
+  width: 80%;
+  background-color: ghostwhite;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fade-in .5s;
+}
+
+@media (min-width: 320px) and (max-width: 740px) {
+  .question-wrap {
+    height: auto;
+    width: 100%;
+  }
+}
+
+.question-title{
+  width: 75%;
+  height: 130px;
+  padding-top: 30px;
+}
+
+@media (min-width: 320px) and (max-width: 740px) {
+  .question-title{
+    width: 90%;
+  }
+}
+
+.question-title h3{
+  animation: fade-in 1.5s;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.answers {
+  animation: fade-in 1.5s;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (min-width: 320px) and (max-width: 740px) {
+  .answers {
+    height: 200px;
+  }
+}
+.answers-list {
+  padding: 20px;
+}
+
+@media (min-width: 320px) and (max-width: 740px) {
+  .answers-list {
+    padding: 10px;
+  }
+}
+
+.submit-answer,
+.next-question,
+.test-option {
+  background-color: #c8e6c9 ;
+  padding: 10px 20px 10px 20px;
+  border: 3px solid #c8e6c9 ;
+  border-radius: 15px;
+  font-size: 18px;
+  transition: 0.3s;
+  animation: fade-in 1.5s;
+}
+
+.test-option {
+  margin-bottom: 25px;
+  margin-top: 75px;
+}
+
+.submit-answer:active,
+.next-question:active,
+.test-option:active {
+  background-color: #26a69a ;
+}
+
+.next-question:hover,
+.submit-answer:hover,
+.test-option:hover {
+  background-color: #26a69a ;
+  transition: 0.3s;
+}
+
+.next-question {
+  display: none;
+}
+
+.response {
+  height: 85px;
+  animation: fade-in 1s;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.answer-response {
+  font-weight: bold;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  padding-top: 10px;
+  animation: fade-in 1s;
+}
+
+.submission {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  animation: fade-in 1s;
+}
+
+.score {
+  display: flex;
+  animation: fade-in 1s;
+  margin-top: 100px;
+}
+
+.answer-response {
+  animation: fade-in 1.5s;
+}
+
+.final-score {
+  padding-left: 5px;
+}
+
+
+.score h3 {
+  padding-right: 5px;
+}
+
+
+.incrementor {
+  width: 30px;
+  text-align: center;
+  border: 1px solid #333;
+  background: ghostwhite;
+  border-radius: 50%;
+  height: 30px;
+  color: #333;
+  font-size: 18px;
+  margin: 0 auto;
+  display: block;
+  animation: fade-in 1s
+}
